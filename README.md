@@ -24,7 +24,7 @@ API 키 없이 동작하며, Claude Code·Claude Desktop 등 MCP를 지원하는
 [uv](https://docs.astral.sh/uv/)가 필요합니다.
 
 ```bash
-git clone https://github.com/kyjlj46/mcp-tools-server.git
+git clone https://github.com/kyjlj46/mcp-tools-server-.git mcp-tools-server   # 폴더 이름은 mcp-tools-server 로
 cd mcp-tools-server
 uv sync
 ```

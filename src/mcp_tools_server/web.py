@@ -17,7 +17,7 @@ from ddgs.exceptions import DDGSException
 from mcp.server.mcpserver.exceptions import ToolError
 
 # 위키미디어는 프로그램 이름과 연락처가 들어간 User-Agent를 요구한다
-USER_AGENT = "mcp-tools-server/0.1 (https://github.com/kyjlj46/mcp-tools-server) httpx"
+USER_AGENT = "mcp-tools-server/0.1 (https://github.com/kyjlj46/mcp-tools-server-) httpx"
 # 일반 웹 페이지는 브라우저가 아닌 User-Agent를 막는 곳이 많다
 BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
 TIMEOUT = httpx.Timeout(15.0)
