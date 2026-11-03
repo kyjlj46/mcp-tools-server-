@@ -1,0 +1,28 @@
+[project]
+name = "mcp-tools-server"
+version = "0.1.0"
+description = "LLM이 tool calling으로 쓰는 기본 도구 MCP 서버 (웹 검색, 뉴스, 페이지 읽기, 위키백과, 시각, 계산기)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "ddgs>=9.16.1",
+    "httpx>=0.28.1",
+    "mcp[cli]>=2.3.0",
+    "tzdata>=2026.6",
+]
+
+[project.scripts]
+mcp-tools-server = "mcp_tools_server:main"
+
+[build-system]
+requires = ["uv_build>=0.11.18,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+markers = ["network: 인터넷 연결이 필요한 테스트"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]

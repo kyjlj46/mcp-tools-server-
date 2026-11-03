@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "도구 테스트 (pytest)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["-v"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "env": { "PYTHONIOENCODING": "utf-8" }
+    },
+    {
+      "name": "MCP 서버 실행 (HTTP, http://127.0.0.1:8765/mcp)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "mcp_tools_server",
+      "args": ["--transport", "streamable-http"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
