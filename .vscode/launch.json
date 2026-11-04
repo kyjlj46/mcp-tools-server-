@@ -4,6 +4,7 @@
     {
       "name": "MCP 서버 실행 (HTTP, http://127.0.0.1:8765/mcp)",
       "type": "debugpy",
+      "python": "${workspaceFolder}/.venv/Scripts/python.exe",
       "request": "launch",
       "module": "mcp_tools_server",
       "args": ["--transport", "streamable-http", "--port", "8765"],
@@ -14,6 +15,7 @@
     {
       "name": "도구 테스트 (pytest)",
       "type": "debugpy",
+      "python": "${workspaceFolder}/.venv/Scripts/python.exe",
       "request": "launch",
       "module": "pytest",
       "args": ["-v"],

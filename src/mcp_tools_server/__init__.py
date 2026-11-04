@@ -15,5 +15,5 @@ def main() -> None:
     if args.transport == "stdio":
         server.run("stdio")
     else:
-        print(f"MCP 서버: http://{args.host}:{args.port}/mcp")
+        print(f"MCP 서버: http://{args.host}:{args.port}/mcp  (끄려면 Ctrl+C / VS Code에서는 Shift+F5)", flush=True)
         server.run("streamable-http", host=args.host, port=args.port)
