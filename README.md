@@ -29,6 +29,17 @@ cd mcp-tools-server
 uv sync
 ```
 
+## 기동 방법
+
+| 방식 | 기동 | 언제 쓰나 |
+|---|---|---|
+| **stdio** (기본) | 직접 켜지 않습니다. 클라이언트(Claude Code 등)가 필요할 때 하위 프로세스로 띄우고, 끝나면 함께 종료합니다. | Claude Code 등록, image-analyzer "자동 실행" |
+| **HTTP** | `start_http.bat` 더블클릭 (포트를 바꾸려면 `start_http.bat 9000`), 또는 VS Code F5 → "MCP 서버 실행 (HTTP)", 또는 `uv run mcp-tools-server --transport streamable-http --port 8765` | 서버를 계속 켜 두고 여러 클라이언트가 같이 쓸 때. 주소: `http://127.0.0.1:8765/mcp` |
+
+image-analyzer에 연결하려면 그 화면 왼쪽 **웹 도구 (MCP 서버) → 설정**에서 방식을 고릅니다.
+- 자동 실행: 폴더 경로만 맞으면 됩니다.
+- HTTP: 위 방법으로 서버를 켠 뒤 주소를 입력하고 "저장 · 연결 테스트"를 누릅니다.
+
 ## 사용
 
 ### Claude Code에 등록
@@ -111,4 +122,5 @@ uv run pytest -m "not network"   # 오프라인 테스트만
 | `src/mcp_tools_server/web.py` | 검색·페이지 읽기·위키백과 구현 |
 | `src/mcp_tools_server/basic.py` | 현재 시각·계산기 구현 |
 | `src/mcp_tools_server/__init__.py` | 실행 진입점 (`--transport`, `--port`) |
+| `start_http.bat` | HTTP 모드로 서버 실행 (Windows, 기본 포트 8765) |
 | `tests/test_tools.py` | 도구 단위 테스트 + stdio 하위 프로세스 연결 테스트 |
