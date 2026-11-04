@@ -85,7 +85,7 @@ Claude Code 안에서 도구 이름은 `mcp__tools__<도구명>` 형식입니다
 uv run mcp-tools-server --transport streamable-http --port 8765   # → http://127.0.0.1:8765/mcp
 ```
 
-VS Code에서 F5를 누르면 "MCP 서버 실행 (HTTP)"이 기본으로 실행됩니다(포트 8765). 실행·디버그 패널에서 "도구 테스트 (pytest)"를 고를 수도 있습니다.
+VS Code에서 F5를 누르면 MCP 서버가 HTTP 모드로 실행됩니다(포트 8765). 테스트는 왼쪽 테스트 패널(플라스크 아이콘)이나 `uv run pytest`로 실행합니다.
 
 ## 이 서버를 쓰는 프로젝트
 

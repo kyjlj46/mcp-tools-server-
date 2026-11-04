@@ -11,17 +11,6 @@
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "env": { "PYTHONIOENCODING": "utf-8" }
-    },
-    {
-      "name": "도구 테스트 (pytest)",
-      "type": "debugpy",
-      "python": "${workspaceFolder}/.venv/Scripts/python.exe",
-      "request": "launch",
-      "module": "pytest",
-      "args": ["-v"],
-      "cwd": "${workspaceFolder}",
-      "console": "integratedTerminal",
-      "env": { "PYTHONIOENCODING": "utf-8" }
     }
   ]
 }
